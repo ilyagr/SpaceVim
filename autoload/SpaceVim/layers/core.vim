@@ -247,6 +247,7 @@ function! SpaceVim#layers#core#config() abort
         \ ]
         \ ]
         \ , 1)
+  call SpaceVim#mapping#space#def('nnoremap', ['f', 'v', '/'], 'Grepper -cd ' . g:_spacevim_root_dir, 'fuzzy search for text in SpaceVim code', 1)
   let lnum = expand('<slnum>') + s:lnum - 1
   call SpaceVim#mapping#space#def('nnoremap', ['n', '-'], 'call call('
         \ . string(s:_function('s:number_transient_state')) . ', ["-"])',
